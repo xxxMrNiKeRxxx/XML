@@ -1,0 +1,141 @@
+/* Общие стили */
+body {
+  display: flex;              /* Для центрирования калькулятора */
+  justify-content: center;    /* Горизонтальное центрирование */
+  align-items: center;         /* Вертикальное центрирование */
+  min-height: 100vh;          /* Занимаем всю высоту экрана */
+  background-color: #2b2b2b;  /* Темно-серый фон */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Аккуратный шрифт */
+  background-image: url('211.jpg'); /* Добавляем изображение на фон */
+  background-size: cover;       /* Растягиваем изображение на весь фон */
+  background-blend-mode: multiply; /* Затемняем фон */
+}
+
+.calculator {
+  text-align: center; /* Выравниваем содержимое калькулятора по центру */
+}
+
+/* Стиль для кнопки смены темы */
+.theme-button {
+  background-color: #8b0000; /* Синий цвет кнопки */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Базовый стиль кнопки калькулятора */
+.my-btn {
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 60px;                  /* Увеличим размер кнопки */
+  height: 60px;                 /* Увеличим размер кнопки */
+  border-radius: 0px;           /* Делаем кнопки квадратными */
+  border: none;
+  background: #3e3e3e;         /* Темно-серый цвет кнопки */
+  color: #d4d4d4;              /* Светло-серый цвет текста */
+  font-size: 1.2rem;           /* Уменьшим размер шрифта */
+  font-family: 'Roboto', sans-serif; /* Более современный шрифт */
+  font-weight: 300;             /* Делаем шрифт тоньше */
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease; /* Плавный переход цвета */
+}
+
+/* Hover эффект */
+.my-btn:hover {
+  background-color: #8b0000;   /* Светло-синий цвет при наведении */
+  color: #fff;                  /* Белый текст при наведении */
+}
+
+/* Active эффект */
+.my-btn:active {
+  filter: brightness(120%);
+}
+
+/* Стиль для основных операций */
+.my-btn.primary {
+  background: #8b0000;         /* Синий цвет для основных операций */
+  color: #fff;
+}
+
+/* Стиль для второстепенных операций */
+.my-btn.secondary {
+  background: #505050;         /* Чуть более светлый серый */
+  color: #d4d4d4;
+}
+
+/* Стиль для кнопки Execute (=) */
+.my-btn.execute {
+  width: 125px;                /* Увеличим ширину кнопки */
+  border-radius: 0px;           /* Убираем округлость */
+}
+
+/* Стиль для поля вывода результата */
+.result {
+  width: 250px;                /* Увеличим размер окна вывода */
+  height: 70px;                 /* Увеличим размер окна вывода */
+  margin-bottom: 20px;         /* Увеличим отступ снизу */
+  padding: 15px;               /* Увеличим отступ внутри */
+  background: #333333;        /* Темно-серый фон */
+  text-align: right;
+  color: #8b0000;              /* Бирюзовый цвет текста */
+  font-size: 2rem;             /* Увеличим размер шрифта */
+  font-family: 'Roboto Mono', monospace; /* Моноширинный шрифт */
+  border-radius: 10px;          /* Скругленные края */
+  overflow: hidden;             /* Скрываем переполнение текста */
+}
+
+/* Стиль для надписи внизу */
+.footer {
+  margin-top: 20px;
+  color: #888888;
+  font-size: 0.8rem;
+}
+
+/* Стиль для выпадающего списка */
+select {
+  background-color: #8b0000;
+  color: #888888;
+  border: 1px solid #505050;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Стили для сворачивающихся подробностей */
+details {
+  margin-bottom: 10px;
+}
+
+summary {
+  cursor: pointer;
+  color: #d2d2d2;
+}
+
+details p {
+  color: #e0e0e0; /* Более светлый серый цвет для текста */
+}
+
+/* Стиль для цели ЛР */
+.objective {
+  color: #d4d4d4;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ff9801; /* Оранжевый цвет для подсветки */
+  font-weight: bold; /* Делаем текст жирным */
+}
+body.dark-theme {
+  background-color: #121212; /* Еще более темный фон */
+  color: #fff;
+}
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme"); // Добавляем/удаляем класс 'dark-theme'
+}
+
+
